@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Doa Bulanan - UKM Katolik</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #5a0099;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .dropdown-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .dropdown-button {
+            background-color: #5a0099;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .dropdown-button:hover {
+            background-color: #7b1fa2;
+        }
+
+        .dropdown-list {
+            display: none;
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .dropdown-list li {
+            margin: 10px 0;
+        }
+
+        .dropdown-list li a {
+            text-decoration: none;
+            color: #333;
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .dropdown-list li a:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Unit Kegiatan Mahasiswa Katolik</h1>
+        <h2>Doa Bulanan</h2>
+    </div>
+
+    <div class="dropdown-container">
+        <button onclick="toggleDropdown()" class="dropdown-button">Doa Bulanan</button>
+        <ul id="dropdown-list" class="dropdown-list">
+            <li><a href="#">Doa Bulanan 1</a></li>
+            <li><a href="#">Doa Bulanan 2</a></li>
+            <li><a href="#">Doa Bulanan 3</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleDropdown() {
+            const list = document.getElementById("dropdown-list");
+            list.style.display = (list.style.display === "block") ? "none" : "block";
+        }
+    </script>
+
+</body>
+</html>

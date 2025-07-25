@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Dokumentasi Kegiatan UKM Katolik</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #3d0066;
+      color: #3d0066;
+    }
+
+    header {
+      background-color: #3d0066;
+      color: white;
+      padding: 30px 20px 20px;
+      text-align: center;
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .logo {
+      max-width: 90px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .nav {
+      background-color: #ffdd00;
+      text-align: center;
+      padding: 12px 0;
+    }
+
+    .nav a {
+      color: #000;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .nav a:hover {
+      color: #0066ff;
+    }
+
+    .container {
+      padding: 30px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 24px;
+      color: #fff;
+      margin-bottom: 30px;
+    }
+
+    .button-group {
+      text-align: center;
+      margin-top: 40px;
+      position: relative; /* penting agar dropdown absolut bekerja */
+    }
+
+    .button-group button {
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      border: none;
+      padding: 12px 24px;
+      border-radius: 25px;
+      margin: 10px 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .button-group button:hover {
+      background-color: #ffdd00;
+    }
+
+    .dropdown-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-button {
+      background-color: #5a0099;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    .dropdown-button:hover {
+      background-color: #7b1fa2;
+    }
+
+    .dropdown-list {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      list-style: none;
+      padding: 10px 0;
+      margin: 10px 0 0 0;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      z-index: 10;
+      width: 200px;
+    }
+
+    .dropdown-list li {
+      text-align: left;
+    }
+
+    .dropdown-list li a {
+      display: block;
+      text-decoration: none;
+      color: #333;
+      padding: 10px 20px;
+      border-radius: 6px;
+    }
+
+    .dropdown-list li a:hover {
+      background-color: #f0f0f0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #3d0066;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="logo.jpg" alt="Logo UKM Katolik" class="logo">
+    </div>
+    <h1>Dokumentasi Kegiatan UKM Katolik</h1>
+  </header>
+
+  <div class="nav">
+    <a href="beranda.html">Beranda</a>
+    <a href="struktur.html">Struktur</a>
+    <a href="kegiatan.html">Kegiatan</a>
+    <a href="kontak.html">Kontak</a>
+  </div>
+
+  <div class="container">
+    <h2 class="section-title"></h2>
+
+    <div class="button-group">
+      <div class="dropdown-wrapper">
+        <button onclick="toggleDropdown()" class="dropdown-button">Doa Bulanan</button>
+        <ul id="dropdown-list" class="dropdown-list">
+          <li><a href="#">Doa Bulanan 1</a></li>
+          <li><a href="#">Doa Bulanan 2</a></li>
+          <li><a href="#">Doa Bulanan 3</a></li>
+        </ul>
+      </div>
+
+      <button onclick="location.href='camping_rohani.html'">CAMPING ROHANI</button>
+      <button onclick="location.href='bakti_sosial.html'">BAKTI SOSIAL</button>
+      <button onclick="location.href='kunjungan_kasih.html'">KUNJUNGAN KASIH</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleDropdown() {
+      const list = document.getElementById("dropdown-list");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+
+    // Opsional: klik di luar dropdown untuk menutupnya
+    document.addEventListener("click", function (e) {
+      const button = document.querySelector(".dropdown-button");
+      const list = document.getElementById("dropdown-list");
+      if (!button.contains(e.target) && !list.contains(e.target)) {
+        list.style.display = "none";
+      }
+    });
+  </script>
+
+</body>
+</html>

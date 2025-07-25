@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>FROM REGISTRASI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #6a0dad; /* Latar ungu */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 400px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #6a0dad;
+            color: white;
+            border: none;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #5a0099;
+        }
+
+        .login-link {
+            display: block;
+            margin-top: 10px;
+            color: #6a0dad;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <img src="logo_ukm.png" alt="Logo UKM Katolik" class="logo">
+        <h2>Pendaftaran Anggota UKM Katolik</h2>
+        <form method="POST" action="simpan_pendaftaran.php">
+            <input type="text" name="nama" placeholder="Nama Lengkap" required>
+            <input type="text" name="npm" placeholder="NPM" required>
+            <input type="text" name="prodi" placeholder="Program Studi" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <button type="submit">Daftar</button>
+        </form>
+        <br>
+        <a href="login.php" class="login-link">Sudah daftar? Login di sini</a>
+    </div>
+</body>
+</html>

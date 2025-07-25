@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rencana Kegiatan UKM Katolik</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color:  #3d0066;
+    }
+
+    header {
+      background-color: #3d0066;
+      color: #ffdd00;
+      text-align: center;
+      padding: 25px 15px 15px;
+    }
+
+    header img {
+      width: 75px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    nav {
+      background-color:#ffdd00;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #ffcc00;
+    }
+
+    .kegiatan-wrapper {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .kegiatan {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 25px;
+      transition: transform 0.2s;
+    }
+
+    .kegiatan:hover {
+      transform: scale(1.01);
+    }
+
+    .kegiatan img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .kegiatan h2 {
+      color: #000000;
+      margin-top: 0;
+    }
+
+    .kegiatan p {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .lokasi a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .lokasi a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      background-color: #eee;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.jpg" alt="Logo UKM Katolik">
+    <h1>Rencana Kegiatan UKM Katolik</h1>
+  </header>
+
+  <nav>
+    <a href="#">Beranda</a>
+    <a href="#camping">Camping Rohani</a>
+    <a href="#badminton">Badminton</a>
+  </nav>
+
+  <div class="kegiatan-wrapper">
+    
+    <div class="kegiatan" id="camping">
+      <img src="camping1.jpg" alt="Camping Rohani">
+      <h2>Camping Rohani</h2>
+      <p>Yuk ikuti <strong>Camping Rohani</strong> bersama UKM Katolik! Kegiatan ini akan membawa kita lebih dekat kepada Tuhan dan sesama melalui refleksi, kebersamaan, dan suasana alam yang damai.</p>
+      <p class="lokasi">📍 Lokasi: <a href="https://www.google.com/maps/place/Universitas+Putera+Batam/@1.043518,104.00192,17z" target="_blank">Pasir Putih, Batam</a></p>
+      <p>📅 Tanggal: 25 Juli 2025</p>
+    </div>
+
+    <div class="kegiatan" id="badminton">
+      <img src="badminton.jpg" alt="Badminton UKM">
+      <h2>Badminton</h2>
+      <p>Gabung dalam kegiatan <strong>Badminton UKM Katolik</strong>! Ayo jaga kebugaran dan bangun semangat sportivitas sambil mempererat tali persaudaraan antar anggota.</p>
+      <p class="lokasi">📍 Lokasi: <a href="https://www.google.com/maps/place/Universitas+Putera+Batam/@1.043518,104.00192,17z" target="_blank">GOR Universitas Putera Batam</a></p>
+      <p>📅 Tanggal: 27 Juli 2025</p>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 UKM Katolik Universitas Putera Batam. All rights reserved.
+  </footer>
+
+</body>
+</html>
